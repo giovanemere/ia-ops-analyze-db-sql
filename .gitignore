@@ -1,0 +1,48 @@
+# Logs
+logs/
+*.log
+
+# Reports (contienen datos sensibles)
+reports/
+*.txt
+*.csv
+
+# Archivos temporales
+*.tmp
+*.temp
+*~
+
+# Archivos de configuración local
+config.local.*
+.env.local
+
+# Archivos de backup
+*.bak
+*.bacpac
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de Node.js (si se agregan en el futuro)
+node_modules/
+npm-debug.log*
+
+# Archivos de Python (si se agregan en el futuro)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Archivos de PowerShell
+*.ps1xml
