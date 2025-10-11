@@ -5,9 +5,9 @@
 # Restaura desde backup más reciente
 # =====================================================
 
-# Configuración (ACTUALIZAR CON TUS VALORES)
-RESOURCE_GROUP="TU_RESOURCE_GROUP"  # CAMBIAR
-STORAGE_ACCOUNT="primaxbackups2024"
+# Configuración (valores actualizados para el entorno real)
+RESOURCE_GROUP="PERRSGRPYPRMTCLLYP"
+STORAGE_ACCOUNT="perstgmotorbackprd"
 CONTAINER_NAME="backups"
 USERNAME="u_yairpanqueva"
 PASSWORD="0x2E0403602967FDD263E5"

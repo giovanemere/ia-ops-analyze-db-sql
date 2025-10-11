@@ -14,9 +14,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPORTS_DIR="$SCRIPT_DIR/../../reports/optimization"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
-# Variables de Azure (ACTUALIZAR CON TUS VALORES)
-RESOURCE_GROUP="TU_RESOURCE_GROUP"  # CAMBIAR
-STORAGE_ACCOUNT="primaxbackups2024"
+# Variables de Azure (valores actualizados para el entorno real)
+RESOURCE_GROUP="PERRSGRPYPRMTCLLYP"
+STORAGE_ACCOUNT="perstgmotorbackprd"
 CONTAINER_NAME="backups"
 
 # Colores

@@ -9,10 +9,10 @@
 source "$(dirname "$0")/../common/logging.sh"
 
 # Configuración (modificar según sus valores)
-RESOURCE_GROUP="your-resource-group"
+RESOURCE_GROUP="PERRSGRPYPRMTCLLYP"
 SERVER_NAME="persqlmotorpromocprd"
 DATABASE_NAME="persqldbmotorpromocprd"
-STORAGE_ACCOUNT="yourstorageaccount"
+STORAGE_ACCOUNT="perstgmotorbackprd"
 CONTAINER_NAME="backups"
 ADMIN_LOGIN="u_yairpanqueva"
 ADMIN_PASSWORD="0x2E0403602967FDD263E5"
@@ -110,7 +110,7 @@ log_info "⏳ Monitoreando progreso del export..."
 while true; do
     sleep 30
     
-    STATUS_RESULT=$(az sql db export-status show \
+    STATUS_RESULT=$(az sql db show-operation \
         --operation-id "$OPERATION_ID" \
         --resource-group "$RESOURCE_GROUP" \
         --server "$SERVER_NAME" \

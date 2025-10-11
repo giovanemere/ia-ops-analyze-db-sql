@@ -4,29 +4,29 @@
 # =====================================================
 
 param(
-    [Parameter(Mandatory=$true)]
-    [string]$ResourceGroupName,
+    [Parameter(Mandatory=$false)]
+    [string]$ResourceGroupName = "PERRSGRPYPRMTCLLYP",
     
-    [Parameter(Mandatory=$true)]
-    [string]$ServerName,
+    [Parameter(Mandatory=$false)]
+    [string]$ServerName = "persqlmotorpromocprd",
     
-    [Parameter(Mandatory=$true)]
-    [string]$DatabaseName,
+    [Parameter(Mandatory=$false)]
+    [string]$DatabaseName = "persqldbmotorpromocprd",
     
-    [Parameter(Mandatory=$true)]
-    [string]$StorageAccountName,
+    [Parameter(Mandatory=$false)]
+    [string]$StorageAccountName = "perstgmotorbackprd",
     
-    [Parameter(Mandatory=$true)]
-    [string]$ContainerName,
+    [Parameter(Mandatory=$false)]
+    [string]$ContainerName = "backups",
     
     [Parameter(Mandatory=$false)]
     [string]$BackupFileName = "",
     
-    [Parameter(Mandatory=$true)]
-    [string]$AdminLogin,
+    [Parameter(Mandatory=$false)]
+    [string]$AdminLogin = "u_yairpanqueva",
     
-    [Parameter(Mandatory=$true)]
-    [string]$AdminPassword
+    [Parameter(Mandatory=$false)]
+    [string]$AdminPassword = "0x2E0403602967FDD263E5"
 )
 
 # Configuración

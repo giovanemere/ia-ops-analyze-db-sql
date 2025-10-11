@@ -1,120 +1,199 @@
 -- =====================================================
--- ANÁLISIS COMPLETO DE RENDIMIENTO
--- Identifica problemas específicos de la BD
+-- ANÁLISIS DE RENDIMIENTO (SIN QUERY STORE)
+-- Análisis completo sin dependencia de Query Store
 -- =====================================================
 
--- 1. ANÁLISIS DE FRAGMENTACIÓN CRÍTICA
+PRINT '🔍 INICIANDO ANÁLISIS DE RENDIMIENTO';
+PRINT '====================================';
+
+-- Información básica de la base de datos
+PRINT '📊 INFORMACIÓN BÁSICA DE LA BASE DE DATOS';
 SELECT 
-    'FRAGMENTATION_ANALYSIS' as SECTION,
-    SCHEMA_NAME(t.schema_id) as SCHEMA_NAME,
-    t.name as TABLE_NAME,
-    i.name as INDEX_NAME,
-    ips.avg_fragmentation_in_percent as FRAGMENTATION_PERCENT,
-    ips.page_count as PAGE_COUNT,
+    'DATABASE_INFO' as InfoType,
+    DB_NAME() as DatabaseName,
+    DATABASEPROPERTYEX(DB_NAME(), 'Collation') as Collation,
+    DATABASEPROPERTYEX(DB_NAME(), 'Edition') as Edition,
+    DATABASEPROPERTYEX(DB_NAME(), 'ServiceObjective') as ServiceTier,
+    DATABASEPROPERTYEX(DB_NAME(), 'MaxSizeInBytes') as MaxSizeBytes,
+    create_date,
+    compatibility_level
+FROM sys.databases 
+WHERE name = DB_NAME();
+
+-- Análisis de fragmentación de índices
+PRINT '🔧 ANÁLISIS DE FRAGMENTACIÓN DE ÍNDICES';
+SELECT 
+    'FRAGMENTATION_ANALYSIS' as AnalysisType,
+    OBJECT_NAME(ips.object_id) AS TableName,
+    i.name AS IndexName,
+    i.type_desc AS IndexType,
+    ips.avg_fragmentation_in_percent,
+    ips.page_count,
     CASE 
-        WHEN ips.avg_fragmentation_in_percent > 30 THEN 'CRÍTICO - REBUILD'
-        WHEN ips.avg_fragmentation_in_percent > 10 THEN 'ALTO - REORGANIZE'
+        WHEN ips.avg_fragmentation_in_percent > 30 AND ips.page_count > 1000 THEN 'REBUILD NEEDED'
+        WHEN ips.avg_fragmentation_in_percent > 10 AND ips.page_count > 1000 THEN 'REORGANIZE NEEDED'
         ELSE 'OK'
-    END as RECOMMENDATION,
-    CASE 
-        WHEN t.name = 'CuponesDigitales' THEN 'TABLA PRINCIPAL - PRIORIDAD ALTA'
-        WHEN t.name = 'CuponesFisicoCorreccion' THEN 'TABLA PRINCIPAL - PRIORIDAD ALTA'
-        WHEN t.name = 'GeneralEstadosCuyOpClientePromocion' THEN 'TABLA IMPORTANTE - PRIORIDAD MEDIA'
-        ELSE 'PRIORIDAD BAJA'
-    END as PRIORITY
+    END AS RecommendedAction
 FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') ips
-INNER JOIN sys.tables t ON ips.object_id = t.object_id
-INNER JOIN sys.indexes i ON ips.object_id = i.object_id AND ips.index_id = i.index_id
-WHERE t.is_ms_shipped = 0 AND ips.avg_fragmentation_in_percent > 5
+JOIN sys.indexes i ON ips.object_id = i.object_id AND ips.index_id = i.index_id
+WHERE ips.avg_fragmentation_in_percent > 5
+    AND i.name IS NOT NULL
 ORDER BY ips.avg_fragmentation_in_percent DESC;
 
--- 2. ANÁLISIS DE CONSULTAS COSTOSAS
-SELECT TOP 10
-    'EXPENSIVE_QUERIES' as SECTION,
-    qs.total_elapsed_time / qs.execution_count as AVG_ELAPSED_TIME_MS,
-    qs.total_worker_time / qs.execution_count as AVG_CPU_TIME_MS,
-    qs.total_logical_reads / qs.execution_count as AVG_LOGICAL_READS,
-    qs.execution_count as EXECUTION_COUNT,
-    qs.last_execution_time as LAST_EXECUTION_TIME,
-    SUBSTRING(st.text, (qs.statement_start_offset/2)+1, 
-        ((CASE qs.statement_end_offset
-            WHEN -1 THEN DATALENGTH(st.text)
-            ELSE qs.statement_end_offset
-        END - qs.statement_start_offset)/2) + 1) as QUERY_TEXT
-FROM sys.dm_exec_query_stats qs
-CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) st
-WHERE st.dbid = DB_ID()
-ORDER BY qs.total_elapsed_time / qs.execution_count DESC;
-
--- 3. ÍNDICES FALTANTES CRÍTICOS
+-- Estadísticas desactualizadas
+PRINT '📈 ESTADÍSTICAS DESACTUALIZADAS';
 SELECT 
-    'MISSING_INDEXES' as SECTION,
-    SCHEMA_NAME(t.schema_id) as SCHEMA_NAME,
-    t.name as TABLE_NAME,
-    mid.equality_columns as EQUALITY_COLUMNS,
-    mid.inequality_columns as INEQUALITY_COLUMNS,
-    mid.included_columns as INCLUDED_COLUMNS,
-    migs.user_seeks as USER_SEEKS,
-    migs.avg_total_user_cost as AVG_TOTAL_USER_COST,
-    migs.avg_user_impact as AVG_USER_IMPACT,
-    (migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) as IMPROVEMENT_MEASURE,
+    'STATISTICS_ANALYSIS' as AnalysisType,
+    OBJECT_NAME(s.object_id) AS TableName,
+    s.name AS StatsName,
+    STATS_DATE(s.object_id, s.stats_id) AS LastUpdated,
+    DATEDIFF(day, STATS_DATE(s.object_id, s.stats_id), GETDATE()) AS DaysOld,
     CASE 
-        WHEN t.name IN ('CuponesDigitales', 'CuponesFisicoCorreccion') THEN 'CRÍTICO'
-        WHEN t.name = 'GeneralEstadosCuyOpClientePromocion' THEN 'ALTO'
-        ELSE 'MEDIO'
-    END as PRIORITY
-FROM sys.dm_db_missing_index_details mid
-INNER JOIN sys.dm_db_missing_index_groups mig ON mid.index_handle = mig.index_handle
-INNER JOIN sys.dm_db_missing_index_group_stats migs ON mig.index_group_handle = migs.group_handle
-INNER JOIN sys.tables t ON mid.object_id = t.object_id
-WHERE mid.database_id = DB_ID()
-ORDER BY (migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) DESC;
-
--- 4. ESTADÍSTICAS DESACTUALIZADAS
-SELECT 
-    'OUTDATED_STATISTICS' as SECTION,
-    SCHEMA_NAME(t.schema_id) as SCHEMA_NAME,
-    t.name as TABLE_NAME,
-    s.name as STATS_NAME,
-    STATS_DATE(s.object_id, s.stats_id) as LAST_UPDATED,
-    DATEDIFF(DAY, STATS_DATE(s.object_id, s.stats_id), GETDATE()) as DAYS_OLD,
-    CASE 
-        WHEN DATEDIFF(DAY, STATS_DATE(s.object_id, s.stats_id), GETDATE()) > 7 THEN 'CRÍTICO - Actualizar'
-        WHEN DATEDIFF(DAY, STATS_DATE(s.object_id, s.stats_id), GETDATE()) > 3 THEN 'ALTO - Actualizar'
+        WHEN STATS_DATE(s.object_id, s.stats_id) IS NULL THEN 'NEVER UPDATED'
+        WHEN DATEDIFF(day, STATS_DATE(s.object_id, s.stats_id), GETDATE()) > 30 THEN 'CRITICAL - UPDATE NEEDED'
+        WHEN DATEDIFF(day, STATS_DATE(s.object_id, s.stats_id), GETDATE()) > 7 THEN 'UPDATE RECOMMENDED'
         ELSE 'OK'
-    END as RECOMMENDATION
+    END AS Status
 FROM sys.stats s
-INNER JOIN sys.tables t ON s.object_id = t.object_id
-WHERE t.is_ms_shipped = 0
-    AND STATS_DATE(s.object_id, s.stats_id) IS NOT NULL
-ORDER BY DATEDIFF(DAY, STATS_DATE(s.object_id, s.stats_id), GETDATE()) DESC;
+JOIN sys.objects o ON s.object_id = o.object_id
+WHERE o.type = 'U'
+    AND (STATS_DATE(s.object_id, s.stats_id) IS NULL 
+         OR STATS_DATE(s.object_id, s.stats_id) < DATEADD(day, -7, GETDATE()))
+ORDER BY DaysOld DESC;
 
--- 2. Consultas más costosas (requiere Query Store habilitado)
-SELECT TOP 10
-    qt.query_sql_text,
-    rs.avg_duration/1000 as avg_duration_ms,
-    rs.avg_cpu_time/1000 as avg_cpu_time_ms,
-    rs.avg_logical_io_reads,
-    rs.count_executions
-FROM sys.query_store_query_text qt
-INNER JOIN sys.query_store_query q ON qt.query_text_id = q.query_text_id
-INNER JOIN sys.query_store_runtime_stats rs ON q.query_id = rs.query_id
-WHERE rs.avg_duration > 1000000 -- > 1 segundo
-ORDER BY rs.avg_duration DESC;
-
--- 3. Estadísticas de fragmentación
+-- Análisis de tablas grandes
+PRINT '📊 ANÁLISIS DE TABLAS GRANDES';
 SELECT 
-    OBJECT_NAME(ips.object_id) AS Tabla,
-    i.name AS Indice,
-    ips.avg_fragmentation_in_percent AS Fragmentacion_Pct,
-    ips.page_count AS Total_Paginas,
+    'TABLE_SIZE_ANALYSIS' as AnalysisType,
+    t.name AS TableName,
+    p.rows AS RowCount,
+    CAST(ROUND(((SUM(a.total_pages) * 8) / 1024.00), 2) AS NUMERIC(36, 2)) AS TotalSpaceMB,
+    CAST(ROUND(((SUM(a.used_pages) * 8) / 1024.00), 2) AS NUMERIC(36, 2)) AS UsedSpaceMB,
+    CAST(ROUND(((SUM(a.total_pages) - SUM(a.used_pages)) * 8) / 1024.00, 2) AS NUMERIC(36, 2)) AS UnusedSpaceMB,
     CASE 
-        WHEN ips.avg_fragmentation_in_percent > 30 THEN 'REBUILD'
-        WHEN ips.avg_fragmentation_in_percent > 10 THEN 'REORGANIZE'
-        ELSE 'OK'
-    END AS Accion_Recomendada
-FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') ips
-INNER JOIN sys.indexes i ON ips.object_id = i.object_id AND ips.index_id = i.index_id
-WHERE ips.avg_fragmentation_in_percent > 10
-AND ips.page_count > 1000
-ORDER BY ips.avg_fragmentation_in_percent DESC;
+        WHEN p.rows > 10000000 THEN 'VERY LARGE'
+        WHEN p.rows > 1000000 THEN 'LARGE'
+        WHEN p.rows > 100000 THEN 'MEDIUM'
+        ELSE 'SMALL'
+    END AS TableSize
+FROM sys.tables t
+INNER JOIN sys.indexes i ON t.object_id = i.object_id
+INNER JOIN sys.partitions p ON i.object_id = p.object_id AND i.index_id = p.index_id
+INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
+LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id
+WHERE t.name NOT LIKE 'dt%' 
+    AND t.is_ms_shipped = 0
+    AND i.object_id > 255
+GROUP BY t.name, s.name, p.rows
+HAVING p.rows > 1000
+ORDER BY p.rows DESC;
+
+-- Índices faltantes sugeridos por SQL Server
+PRINT '🔍 ÍNDICES FALTANTES SUGERIDOS';
+SELECT 
+    'MISSING_INDEXES' as AnalysisType,
+    OBJECT_NAME(mid.object_id) AS TableName,
+    mid.equality_columns,
+    mid.inequality_columns,
+    mid.included_columns,
+    migs.avg_total_user_cost * (migs.avg_user_impact / 100.0) * (migs.user_seeks + migs.user_scans) AS improvement_measure,
+    'CREATE INDEX IX_' + OBJECT_NAME(mid.object_id) + '_Missing_' + CAST(mid.index_handle AS VARCHAR(10)) + 
+    ' ON ' + OBJECT_NAME(mid.object_id) + 
+    ' (' + ISNULL(mid.equality_columns, '') + 
+    CASE WHEN mid.equality_columns IS NOT NULL AND mid.inequality_columns IS NOT NULL THEN ',' ELSE '' END +
+    ISNULL(mid.inequality_columns, '') + ')' +
+    ISNULL(' INCLUDE (' + mid.included_columns + ')', '') AS CreateIndexStatement
+FROM sys.dm_db_missing_index_groups mig
+INNER JOIN sys.dm_db_missing_index_group_stats migs ON migs.group_handle = mig.index_group_handle
+INNER JOIN sys.dm_db_missing_index_details mid ON mig.index_handle = mid.index_handle
+WHERE migs.avg_total_user_cost * (migs.avg_user_impact / 100.0) * (migs.user_seeks + migs.user_scans) > 10
+ORDER BY improvement_measure DESC;
+
+-- Análisis de esperas (Wait Stats)
+PRINT '⏳ ANÁLISIS DE ESPERAS (WAIT STATS)';
+WITH WaitStats AS (
+    SELECT 
+        wait_type,
+        wait_time_ms,
+        waiting_tasks_count,
+        signal_wait_time_ms,
+        wait_time_ms - signal_wait_time_ms AS resource_wait_time_ms
+    FROM sys.dm_os_wait_stats
+    WHERE wait_type NOT IN (
+        'CLR_SEMAPHORE', 'LAZYWRITER_SLEEP', 'RESOURCE_QUEUE', 'SLEEP_TASK',
+        'SLEEP_SYSTEMTASK', 'SQLTRACE_BUFFER_FLUSH', 'WAITFOR', 'LOGMGR_QUEUE',
+        'CHECKPOINT_QUEUE', 'REQUEST_FOR_DEADLOCK_SEARCH', 'XE_TIMER_EVENT',
+        'BROKER_TO_FLUSH', 'BROKER_TASK_STOP', 'CLR_MANUAL_EVENT', 'CLR_AUTO_EVENT',
+        'DISPATCHER_QUEUE_SEMAPHORE', 'FT_IFTS_SCHEDULER_IDLE_WAIT', 'XE_DISPATCHER_WAIT',
+        'XE_DISPATCHER_JOIN', 'SQLTRACE_INCREMENTAL_FLUSH_SLEEP'
+    )
+    AND wait_time_ms > 0
+)
+SELECT TOP 10
+    'WAIT_STATS_ANALYSIS' as AnalysisType,
+    wait_type,
+    CAST(wait_time_ms / 1000.0 AS DECIMAL(12, 2)) AS wait_time_seconds,
+    waiting_tasks_count,
+    CAST(wait_time_ms / waiting_tasks_count AS DECIMAL(12, 2)) AS avg_wait_time_ms,
+    CAST(100.0 * wait_time_ms / SUM(wait_time_ms) OVER() AS DECIMAL(5, 2)) AS percentage,
+    CASE wait_type
+        WHEN 'PAGEIOLATCH_SH' THEN 'Disk I/O - Reading data pages'
+        WHEN 'PAGEIOLATCH_EX' THEN 'Disk I/O - Writing data pages'
+        WHEN 'LCK_M_S' THEN 'Lock waits - Shared locks'
+        WHEN 'LCK_M_X' THEN 'Lock waits - Exclusive locks'
+        WHEN 'CXPACKET' THEN 'Parallelism - Query coordination'
+        WHEN 'SOS_SCHEDULER_YIELD' THEN 'CPU pressure - Scheduler yields'
+        WHEN 'WRITELOG' THEN 'Log I/O - Transaction log writes'
+        ELSE 'Other wait type'
+    END AS wait_description
+FROM WaitStats
+ORDER BY wait_time_ms DESC;
+
+-- Verificar configuración de Query Store
+PRINT '🗃️ CONFIGURACIÓN DE QUERY STORE';
+SELECT 
+    'QUERY_STORE_CONFIG' as ConfigType,
+    actual_state_desc as CurrentState,
+    readonly_reason_desc as ReadOnlyReason,
+    desired_state_desc as DesiredState,
+    current_storage_size_mb,
+    max_storage_size_mb,
+    flush_interval_seconds,
+    interval_length_minutes,
+    max_plans_per_query,
+    query_capture_mode_desc,
+    size_based_cleanup_mode_desc
+FROM sys.database_query_store_options;
+
+-- Resumen de recomendaciones
+PRINT '💡 RESUMEN DE RECOMENDACIONES';
+SELECT 
+    'RECOMMENDATIONS_SUMMARY' as SummaryType,
+    'HIGH_PRIORITY' as Priority,
+    'Rebuild highly fragmented indexes (>30%)' as Recommendation,
+    (SELECT COUNT(*) FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') ips
+     JOIN sys.indexes i ON ips.object_id = i.object_id AND ips.index_id = i.index_id
+     WHERE ips.avg_fragmentation_in_percent > 30 AND ips.page_count > 1000 AND i.name IS NOT NULL) as AffectedObjects
+
+UNION ALL
+
+SELECT 
+    'RECOMMENDATIONS_SUMMARY',
+    'MEDIUM_PRIORITY',
+    'Update outdated statistics (>7 days)',
+    (SELECT COUNT(*) FROM sys.stats s
+     JOIN sys.objects o ON s.object_id = o.object_id
+     WHERE o.type = 'U' AND STATS_DATE(s.object_id, s.stats_id) < DATEADD(day, -7, GETDATE()))
+
+UNION ALL
+
+SELECT 
+    'RECOMMENDATIONS_SUMMARY',
+    'LOW_PRIORITY',
+    'Consider creating missing indexes',
+    (SELECT COUNT(*) FROM sys.dm_db_missing_index_groups mig
+     INNER JOIN sys.dm_db_missing_index_group_stats migs ON migs.group_handle = mig.index_group_handle
+     WHERE migs.avg_total_user_cost * (migs.avg_user_impact / 100.0) * (migs.user_seeks + migs.user_scans) > 10);
+
+PRINT '✅ ANÁLISIS DE RENDIMIENTO COMPLETADO';
+PRINT '======================================';
