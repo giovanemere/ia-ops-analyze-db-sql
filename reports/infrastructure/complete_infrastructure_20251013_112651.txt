@@ -1,0 +1,24 @@
+'01_system_resources.sql': Invalid filename.
+'02_sessions_connections.sql': Invalid filename.
+'03_storage_io_analysis.sql': Invalid filename.
+==========================================
+INICIANDO ANÁLISIS COMPLETO DE INFRAESTRUCTURA
+Base de Datos: persqldbmotorpromocprd
+Servidor: persqlmotorpromocprd
+Fecha/Hora: 2025-10-13 16:27:03
+==========================================
+ 
+1. EJECUTANDO ANÁLISIS DE RECURSOS DEL SISTEMA...
+---------------------------------------------------
+ 
+2. EJECUTANDO ANÁLISIS DE SESIONES Y CONEXIONES...
+----------------------------------------------------
+ 
+3. EJECUTANDO ANÁLISIS DE ALMACENAMIENTO Y I/O...
+--------------------------------------------------
+ 
+==========================================
+ANÁLISIS DE INFRAESTRUCTURA COMPLETADO
+Revise los resultados para optimización
+==========================================
+EXECUTIVE_SUMMARY|INFRASTRUCTURE_ANALYSIS_COMPLETE|persqlmotorpromocprd|persqldbmotorpromocprd|2025-10-13 16:27:03.160|12|911|20|3|1077248

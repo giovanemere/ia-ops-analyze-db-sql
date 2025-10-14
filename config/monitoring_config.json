@@ -1,0 +1,28 @@
+{
+  "monitoring": {
+    "enabled": true,
+    "interval_minutes": 15,
+    "retention_days": 30,
+    "metrics": [
+      "cpu_usage",
+      "memory_usage",
+      "query_performance",
+      "index_fragmentation",
+      "connection_count",
+      "blocking_sessions"
+    ]
+  },
+  "alerts": {
+    "email_enabled": true,
+    "slack_enabled": false,
+    "recipients": [
+      "admin@primax.com"
+    ],
+    "escalation_minutes": 30
+  },
+  "reports": {
+    "daily_summary": true,
+    "weekly_analysis": true,
+    "monthly_trends": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "timestamp": "20251013_145204",
+  "fecha": "2025-10-13T14:52:04.632696",
+  "queries_criticas": [
+    {
+      "rank": 1,
+      "ejecuciones": 1,
+      "promedio_ms": 503682.86,
+      "maximo_ms": 503682.86,
+      "ultima_ejecucion": "2025-10-11 06:04:01.180000",
+      "query_preview": "SELECT   [IDCupon],           [campannaID],           [fecha"
+    },
+    {
+      "rank": 2,
+      "ejecuciones": 1,
+      "promedio_ms": 61280.11,
+      "maximo_ms": 61280.11,
+      "ultima_ejecucion": "2025-10-10 05:12:30.077000",
+      "query_preview": "UPDATE tgt    SET tgt.commerceCode = src.station_cd  FROM [d"
+    },
+    {
+      "rank": 3,
+      "ejecuciones": 66,
+      "promedio_ms": 19118.31,
+      "maximo_ms": 43469.44,
+      "ultima_ejecucion": "2025-10-11 06:07:19.043000",
+      "query_preview": "(@LowerBound int,@UpperBound int)SELECT   [IDCupon],        "
+    },
+    {
+      "rank": 4,
+      "ejecuciones": 10,
+      "promedio_ms": 17853.07,
+      "maximo_ms": 36161.6,
+      "ultima_ejecucion": "2025-10-13 19:01:40.720000",
+      "query_preview": "select * from dbo.cuponesdigitales  WITH (NOLOCK) where esta"
+    },
+    {
+      "rank": 5,
+      "ejecuciones": 1,
+      "promedio_ms": 17254.05,
+      "maximo_ms": 17254.05,
+      "ultima_ejecucion": "2025-10-13 17:35:33.420000",
+      "query_preview": "SELECT * FROM [dbo].[CuponesFisicoCorreccion] WHERE estadoCu"
+    },
+    {
+      "rank": 6,
+      "ejecuciones": 1,
+      "promedio_ms": 16598.59,
+      "maximo_ms": 16598.59,
+      "ultima_ejecucion": "2025-10-13 19:01:35.400000",
+      "query_preview": "select * from dbo.generalestadoscuyopclientepromocion;"
+    },
+    {
+      "rank": 7,
+      "ejecuciones": 217,
+      "promedio_ms": 15444.72,
+      "maximo_ms": 49886.79,
+      "ultima_ejecucion": "2025-10-06 01:31:02.600000",
+      "query_preview": "(@CampannaID int,@Identifier nvarchar(100))SELECT           "
+    },
+    {
+      "rank": 8,
+      "ejecuciones": 1,
+      "promedio_ms": 12425.61,
+      "maximo_ms": 12425.61,
+      "ultima_ejecucion": "2025-10-09 18:10:16.167000",
+      "query_preview": "SELECT  \"IDCupon\" FROM (SELECT IDCupon FROM CuponesFisicoCor"
+    },
+    {
+      "rank": 9,
+      "ejecuciones": 1,
+      "promedio_ms": 7940.08,
+      "maximo_ms": 7940.08,
+      "ultima_ejecucion": "2025-10-05 20:01:12.990000",
+      "query_preview": "SELECT count(distinct taxidentifier) FROM [dbo].[CuponesDigi"
+    },
+    {
+      "rank": 10,
+      "ejecuciones": 3,
+      "promedio_ms": 6168.7,
+      "maximo_ms": 8271.06,
+      "ultima_ejecucion": "2025-10-10 13:11:45.837000",
+      "query_preview": "SELECT  \"taxidentifier\" FROM (select distinct taxidentifier "
+    }
+  ],
+  "sesiones": {
+    "total": 48,
+    "con_requests": 4,
+    "bloqueadas": 0,
+    "esperando": 3
+  },
+  "esperas": [
+    {
+      "tipo": "CXCONSUMER",
+      "tareas": 4795128,
+      "tiempo_total_seg": 366761.73,
+      "promedio_ms": 76.0
+    },
+    {
+      "tipo": "LCK_M_IX",
+      "tareas": 28249,
+      "tiempo_total_seg": 30987.12,
+      "promedio_ms": 1096.0
+    },
+    {
+      "tipo": "LCK_M_X",
+      "tareas": 5218,
+      "tiempo_total_seg": 8039.02,
+      "promedio_ms": 1540.0
+    },
+    {
+      "tipo": "CXPACKET",
+      "tareas": 2698032,
+      "tiempo_total_seg": 1552.51,
+      "promedio_ms": 0
+    },
+    {
+      "tipo": "PAGEIOLATCH_SH",
+      "tareas": 7218,
+      "tiempo_total_seg": 8.43,
+      "promedio_ms": 1.0
+    }
+  ],
+  "resumen": {
+    "queries_cache": 18129,
+    "total_ejecuciones": 1362257,
+    "promedio_general_ms": 48.95,
+    "queries_lentas": 16
+  }
+}

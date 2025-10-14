@@ -1,0 +1,798 @@
+TABLE_STATISTICS|dbo|auditoria_c_digital|PK__auditori__3214EC273D6C85A8|1|0|0|0|0|NULL|NULL|ID
+TABLE_STATISTICS|dbo|auditoria_c_fisico_correccion|PK__auditori__3214EC274513D978|1|0|0|0|0|NULL|NULL|ID
+TABLE_STATISTICS|dbo|auditoria_opcion_digital|PK__auditori__3214EC274135407D|1|0|0|0|0|NULL|NULL|ID
+TABLE_STATISTICS|dbo|Campanna|_WA_Sys_00000004_693CA210|3|1|0|0|0|NULL|2025-10-10 16:33:17.450|fechaFin
+TABLE_STATISTICS|dbo|Campanna|Campanna_PK|1|0|0|0|0|NULL|2025-10-10 16:33:17.443|ID
+TABLE_STATISTICS|dbo|Campanna|UQ_Campanna_campannaID|2|0|0|0|0|NULL|2025-10-10 16:33:17.447|campannaID
+TABLE_STATISTICS|dbo|Campanna_Auditoria|PK_Campanna_Auditoria|1|0|0|0|0|NULL|NULL|AuditID
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000001_6E01572D|5|1|0|0|0|NULL|2025-10-11 07:30:17.890|IDCupon
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000004_6E01572D|4|1|0|0|0|NULL|2025-10-12 09:45:59.510|estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000005_6E01572D|8|1|0|0|0|NULL|2025-10-11 07:31:55.760|coorelativo
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000007_6E01572D|9|1|0|0|0|NULL|2025-10-11 07:32:07.937|ID
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000008_6E01572D|14|1|0|0|0|NULL|2025-10-11 07:34:26.830|commerceCode
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_00000009_6E01572D|7|1|0|0|0|NULL|2025-10-11 07:31:08.477|taxIdentifier
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_0000000A_6E01572D|6|1|0|0|0|NULL|2025-10-11 07:30:44.420|identifier
+TABLE_STATISTICS|dbo|CuponesDigitales|_WA_Sys_0000000C_6E01572D|10|1|0|0|0|NULL|2025-10-11 07:32:35.823|transactionGuid
+TABLE_STATISTICS|dbo|CuponesDigitales|idx_identifier_campanna_estado|12|0|0|0|0|NULL|2025-10-12 12:02:28.630|identifier, campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|idx_tax_campanna_estado|11|0|0|0|0|NULL|2025-10-12 11:51:14.353|taxIdentifier, campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|2|0|0|0|0|NULL|2025-10-11 07:29:05.070|campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_Cupones_CampannaID|3|0|0|0|0|NULL|2025-10-11 07:29:22.470|campannaID
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|17|0|0|0|0|NULL|2025-10-11 07:40:41.767|campannaID, fechaCreacion
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|13|0|0|0|0|NULL|2025-10-11 07:34:04.420|campannaID, identifier, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|15|0|0|0|0|NULL|2025-10-11 07:34:43.757|campannaID, taxIdentifier, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|16|0|0|0|0|NULL|2025-10-11 07:38:16.040|fechaCreacion
+TABLE_STATISTICS|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|1|0|0|0|0|NULL|2025-10-11 07:42:47.067|campannaID, ID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000001_6FE99F9F|6|1|0|0|0|NULL|2025-10-11 07:35:13.183|IDCupon
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000002_6FE99F9F|7|1|0|0|0|NULL|2025-10-11 07:35:20.180|tipoCupon
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000003_6FE99F9F|2|1|0|0|0|NULL|2025-10-11 07:34:50.273|campannaID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000004_6FE99F9F|9|1|0|0|0|NULL|2025-10-11 07:35:30.027|fechaCreacion
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000005_6FE99F9F|3|1|0|0|0|NULL|2025-10-11 07:34:54.613|estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|_WA_Sys_00000007_6FE99F9F|8|1|0|0|0|NULL|2025-10-11 07:35:24.797|coorelativo
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|idx_cupon_campanna_estado|10|0|0|0|0|NULL|2025-10-11 07:35:36.060|IDCupon, campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|11|0|0|0|0|NULL|2025-10-11 07:35:45.493|identifier, campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|5|0|0|0|0|NULL|2025-10-11 07:35:08.597|taxIdentifier, campannaID, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_Campanna_Identifier_Estado|12|0|0|0|0|NULL|2025-10-11 07:35:49.430|campannaID, identifier, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_FechaCreacion_Optimizado|13|0|0|0|0|NULL|2025-10-11 07:40:41.387|fechaCreacion
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|IX_CuponesFisicoCorreccion_Identifier_Estado|4|0|0|0|0|NULL|2025-10-11 07:34:58.667|identifier, estadoCuponID
+TABLE_STATISTICS|dbo|CuponesFisicoCorreccion|PK_CuponesFisicoCorreccion|1|0|0|0|0|NULL|2025-10-11 07:45:11.033|ID
+TABLE_STATISTICS|dbo|Estados|PK__Estados__3214EC277B110505|1|0|0|0|0|NULL|2025-10-10 16:35:07.880|ID
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_00000002_60A75C0F|5|1|0|0|0|NULL|2025-10-11 07:35:51.577|IDCupon
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_00000004_60A75C0F|6|1|0|0|0|NULL|2025-10-11 07:35:52.250|transactionDate
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_00000005_60A75C0F|12|1|0|0|0|NULL|2025-10-11 07:35:55.353|promotionId
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_00000009_60A75C0F|8|1|0|0|0|NULL|2025-10-11 07:35:53.083|Identifier
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_0000000B_60A75C0F|10|1|0|0|0|NULL|2025-10-11 07:35:54.430|couponTypeName
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_0000000C_60A75C0F|11|1|0|0|0|NULL|2025-10-11 07:35:54.797|commerceCode
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|_WA_Sys_0000000F_60A75C0F|7|1|0|0|0|NULL|2025-10-11 07:35:52.467|fechaAsignacion
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|IX_estadoId|2|0|0|0|0|NULL|2025-10-12 16:27:53.233|estadoId
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|IX_fechaCreacion|3|0|0|0|0|NULL|2025-10-12 16:27:53.407|fechaCreacion
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|IX_taxidentifier|4|0|0|0|0|NULL|2025-10-12 16:27:53.617|taxidentifier
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|nci_msft_1_GeneralEstadosCuyOpClientePromocion_7E889BA7CF4601C17673BCA8830A1B05|9|0|0|0|0|NULL|2025-10-12 16:27:53.827|IDCupon
+TABLE_STATISTICS|dbo|GeneralEstadosCuyOpClientePromocion|PK__GeneralE__3214EC27FE1489B2|1|0|0|0|0|NULL|2025-10-12 16:27:53.310|ID
+TABLE_STATISTICS|dbo|OpcionesDigitales|_WA_Sys_00000002_73BA3083|3|1|0|0|0|NULL|2025-10-10 16:35:07.893|campannaID
+TABLE_STATISTICS|dbo|OpcionesDigitales|_WA_Sys_00000003_73BA3083|6|1|0|0|0|NULL|2025-10-10 16:35:07.907|taxIdentifier
+TABLE_STATISTICS|dbo|OpcionesDigitales|_WA_Sys_00000004_73BA3083|4|1|0|0|0|NULL|2025-10-10 16:35:07.897|estadoOpcionID
+TABLE_STATISTICS|dbo|OpcionesDigitales|_WA_Sys_00000005_73BA3083|2|1|0|0|0|NULL|2025-10-10 16:35:07.890|identifier
+TABLE_STATISTICS|dbo|OpcionesDigitales|_WA_Sys_0000000D_73BA3083|5|1|0|0|0|NULL|2025-10-10 16:35:07.900|identifierTypeName
+TABLE_STATISTICS|dbo|OpcionesDigitales|PK__Opciones__3214EC27BFCC29A4|1|0|0|0|0|NULL|2025-10-10 16:35:07.883|ID
+TABLE_STATISTICS|dbo|SolicitudesEstados|_WA_Sys_00000003_75A278F5|4|1|0|0|0|NULL|2025-10-10 16:35:07.927|Estado
+TABLE_STATISTICS|dbo|SolicitudesEstados|_WA_Sys_00000008_75A278F5|3|1|0|0|0|NULL|2025-10-10 16:35:07.920|TipoSolicitud
+TABLE_STATISTICS|dbo|SolicitudesEstados|IX_SolicitudesCupon_CampannaID|2|0|0|0|0|NULL|2025-10-10 16:35:07.917|CampannaID
+TABLE_STATISTICS|dbo|SolicitudesEstados|PK__Solicitu__85E95DA73BF97A6A|1|0|0|0|0|NULL|2025-10-10 16:35:07.910|SolicitudID
+TABLE_STATISTICS|dbo|Usuarios|_WA_Sys_00000002_778AC167|2|1|0|0|0|NULL|2025-10-10 16:35:07.933|password
+TABLE_STATISTICS|dbo|Usuarios|PK__Usuarios__F3DBC573843E572B|1|0|0|0|0|NULL|2025-10-10 16:35:07.930|username
+
+(62 rows affected)
+INDEX_FRAGMENTATION|dbo|GeneralEstadosCuyOpClientePromocion|nci_msft_1_GeneralEstadosCuyOpClientePromocion_7E889BA7CF4601C17673BCA8830A1B05|NONCLUSTERED|99.123877120993669|9017|9017|NULL|NULL|REBUILD
+INDEX_FRAGMENTATION|dbo|GeneralEstadosCuyOpClientePromocion|IX_taxidentifier|NONCLUSTERED|70.478983382209194|5143|7161|NULL|NULL|REBUILD
+INDEX_FRAGMENTATION|dbo|SolicitudesEstados|PK__Solicitu__85E95DA73BF97A6A|CLUSTERED|50.0|2|2|NULL|NULL|REBUILD
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_cupon_campanna_estado|NONCLUSTERED|14.609958506224066|8390|48200|NULL|NULL|REORGANIZE
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|IX_CuponesFisicoCorreccion_Identifier_Estado|NONCLUSTERED|12.418594206153156|2800|22265|NULL|NULL|REORGANIZE
+INDEX_FRAGMENTATION|dbo|GeneralEstadosCuyOpClientePromocion|IX_estadoId|NONCLUSTERED|7.957908582703058|1180|6082|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|GeneralEstadosCuyOpClientePromocion|IX_fechaCreacion|NONCLUSTERED|7.2398843930635834|1288|6920|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|7.103062813324093|8440|111107|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|6.9287432066503811|7522|105618|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|5.2892579591880216|10674|187739|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_Campanna_Identifier_Estado|NONCLUSTERED|4.4824037867874047|2223|48590|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_FechaCreacion_Optimizado|NONCLUSTERED|3.2060989658162802|3390|77259|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|2.8118528923818404|7391|247737|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|2.7007165166268603|770|27215|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|2.5608006181242873|722|27179|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|2.4196410745579979|4520|180316|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|PK_CuponesFisicoCorreccion|CLUSTERED|1.868560272462447|8642|162371|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|1.5862749887333538|20424|290681|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|1.5754737066212479|5637|291214|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|1.3128005820866386|30679|225396|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.51263741426289577|34426|266075|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|GeneralEstadosCuyOpClientePromocion|PK__GeneralE__3214EC27FE1489B2|CLUSTERED|0.21351144202343153|2734|36532|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|auditoria_c_digital|PK__auditori__3214EC273D6C85A8|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|auditoria_c_fisico_correccion|PK__auditori__3214EC274513D978|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|auditoria_opcion_digital|PK__auditori__3214EC274135407D|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|Campanna|Campanna_PK|CLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|Campanna|UQ_Campanna_campannaID|NONCLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|Campanna_Auditoria|PK_Campanna_Auditoria|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|SolicitudesEstados|IX_SolicitudesCupon_CampannaID|NONCLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|Usuarios|PK__Usuarios__F3DBC573843E572B|CLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|Estados|PK__Estados__3214EC277B110505|CLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|OpcionesDigitales|PK__Opciones__3214EC27BFCC29A4|CLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|1|1|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+INDEX_FRAGMENTATION|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|0.0|0|0|NULL|NULL|OK
+
+(582 rows affected)
+SPACE_USAGE|dbo|CuponesDigitales|45001666|15017.48|14949.05|68.42|14889.71|59.34
+SPACE_USAGE|dbo|CuponesFisicoCorreccion|12010500|3241.41|3239.74|1.67|3227.18|12.56
+SPACE_USAGE|dbo|GeneralEstadosCuyOpClientePromocion|1360543|515.85|515.50|.35|513.38|2.13
+SPACE_USAGE|dbo|SolicitudesEstados|15|.14|.05|.09|.02|.02
+SPACE_USAGE|dbo|CuponesDigitales|0|.14|.03|.11|.02|.02
+SPACE_USAGE|dbo|Campanna|4|.14|.03|.11|.02|.02
+SPACE_USAGE|dbo|Estados|5|.07|.02|.05|.01|.01
+SPACE_USAGE|dbo|Usuarios|2|.07|.02|.05|.01|.01
+SPACE_USAGE|dbo|OpcionesDigitales|4|.07|.02|.05|.01|.01
+SPACE_USAGE|dbo|CuponesFisicoCorreccion|0|.00|.00|.00|.00|.00
+SPACE_USAGE|dbo|Campanna_Auditoria|0|.00|.00|.00|.00|.00
+SPACE_USAGE|dbo|auditoria_c_digital|0|.00|.00|.00|.00|.00
+SPACE_USAGE|dbo|auditoria_c_fisico_correccion|0|.00|.00|.00|.00|.00
+SPACE_USAGE|dbo|auditoria_opcion_digital|0|.00|.00|.00|.00|.00
+
+(14 rows affected)
+MISSING_INDEXES|dbo|CuponesFisicoCorreccion|[campannaID], [estadoCuponID]|NULL|[IDCupon]|13|3773|0|2025-10-11 21:53:07.730|38.025284909571774|69.069999999999993|9909431.4555006512
+
+(1 rows affected)
+UNUSED_INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_fechaCreacion|NONCLUSTERED|0|0|0|362134|NULL|NULL|NULL|2025-10-12 18:24:36.927|NEVER_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|0|0|0|124317|NULL|NULL|NULL|2025-10-12 18:24:35.927|NEVER_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|0|0|0|96157|NULL|NULL|NULL|2025-10-12 18:24:35.927|NEVER_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|0|0|0|96157|NULL|NULL|NULL|2025-10-12 18:24:35.927|NEVER_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_FechaCreacion_Optimizado|NONCLUSTERED|0|0|0|12840|NULL|NULL|NULL|2025-10-12 18:24:35.487|NEVER_USED
+UNUSED_INDEXES|dbo|SolicitudesEstados|IX_SolicitudesCupon_CampannaID|NONCLUSTERED|0|2|0|2|NULL|2025-10-11 06:03:47.927|NULL|2025-10-09 18:00:31.790|USED
+UNUSED_INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_taxidentifier|NONCLUSTERED|10|0|0|362134|2025-10-10 17:49:09.223|NULL|NULL|2025-10-12 18:24:36.927|RARELY_USED
+UNUSED_INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_estadoId|NONCLUSTERED|8|2|0|347552|2025-10-11 15:38:46.057|2025-10-11 06:03:47.863|NULL|2025-10-12 18:24:36.927|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|14|0|0|69976|2025-10-06 03:02:28.373|NULL|NULL|2025-10-12 18:24:35.487|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|47|0|0|0|2025-10-09 18:10:16.167|NULL|NULL|NULL|USED
+UNUSED_INDEXES|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|1080|0|0|386484|2025-10-11 19:31:11.677|NULL|NULL|2025-10-12 18:24:35.927|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|1151|7|0|69976|2025-10-11 20:44:31.380|2025-10-08 02:02:32.287|NULL|2025-10-12 18:24:35.487|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|3847|0|0|124240|2025-10-12 18:18:30.220|NULL|NULL|2025-10-12 18:24:35.927|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_Campanna_Identifier_Estado|NONCLUSTERED|6911|42|0|17010|2025-10-11 15:56:31.760|2025-10-11 05:31:30.687|NULL|2025-10-12 18:24:35.487|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|17888|29|0|398455|2025-10-12 17:36:48.850|2025-10-05 18:25:10.170|NULL|2025-10-12 18:24:35.927|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|idx_cupon_campanna_estado|NONCLUSTERED|11567|51299|0|70521|2025-10-12 18:24:24.637|2025-10-12 18:24:35.410|NULL|2025-10-12 18:24:35.487|USED
+UNUSED_INDEXES|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|84753|14|0|386440|2025-10-12 18:24:35.480|2025-10-11 06:03:47.953|NULL|2025-10-12 18:24:35.927|RARELY_USED
+UNUSED_INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisicoCorreccion_Identifier_Estado|NONCLUSTERED|48499|41589|0|69998|2025-10-12 18:24:35.487|2025-10-12 18:24:33.787|NULL|2025-10-12 18:24:35.487|USED
+UNUSED_INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|nci_msft_1_GeneralEstadosCuyOpClientePromocion_7E889BA7CF4601C17673BCA8830A1B05|NONCLUSTERED|314721|0|0|314702|2025-10-12 18:24:36.927|NULL|NULL|2025-10-12 18:24:36.927|USED
+
+(19 rows affected)
+EXPENSIVE_QUERIES|0x030005009104E46BA008650173B3000001000000000000000000000000000000000000000000000000000000|0x050005009104E46BE0A8F1FDD001000001000000000000000000000000000000000000000000000000000000|2995426|6601830|48093|0|12012|2025-10-11 21:53:05.120|2025-10-12 18:24:35.410|SELECT @CuponesInvalidos = STRING_AGG(ct.IDCupon, ',')
+    FROM @CouponTable ct
+    LEFT JOIN CuponesFisicoCorreccion cfc ON ct.IDCupon = cfc.IDCupon
+    WHERE cfc.IDCupon IS NULL
+       OR cfc.CampannaID <> @CampannaID
+       OR cfc.EstadoCuponID <> 1
+EXPENSIVE_QUERIES|0x03000500E55172600E037A016DB3000001000000000000000000000000000000000000000000000000000000|0x05000500E55172601059DDAFD101000001000000000000000000000000000000000000000000000000000000|1210668|744891|15366|0|159|2025-10-12 12:09:32.307|2025-10-12 14:34:10.763|UPDATE TOP (@faltan) cd
+    SET cd.estadoCuponID = @estadoID,
+        cd.taxIdentifier = @taxIdentifier,
+        cd.transactionGuid = @transactionGuid
+    FROM CuponesDigitales cd WITH (ROWLOCK, UPDLOCK, READPAST)
+    WHERE cd.campannaID = @campannaID
+    
+EXPENSIVE_QUERIES|0x03000500888EA41E68DD840171B3000001000000000000000000000000000000000000000000000000000000|0x05000500888EA41E40FFBB4DCF01000001000000000000000000000000000000000000000000000000000000|1039222|719112|15757|0|13532|2025-10-12 12:02:28.363|2025-10-12 18:24:35.927|UPDATE TOP (@optionsEarned) CD
+        SET CD.estadoCuponID   = 2,              
+            CD.taxIdentifier   = @taxIdentifier,
+			CD.commerceCode    = @commerceCode,
+            CD.transactionGuid = @transactionGuid,
+            CD.identifier      
+EXPENSIVE_QUERIES|0x03000500550E30513ED1840171B3000001000000000000000000000000000000000000000000000000000000|0x05000500550E3051F0FE5D0DD001000001000000000000000000000000000000000000000000000000000000|1003824|708975|15756|0|644|2025-10-12 12:03:00.203|2025-10-12 18:17:13.507|UPDATE TOP (@optionsEarned) CD
+        SET CD.estadoCuponID   = 3,              
+            CD.taxIdentifier   = @taxIdentifier,
+			CD.commerceCode    = @commerceCode,
+            CD.transactionGuid = @transactionGuid,
+            CD.identifier      
+EXPENSIVE_QUERIES|0x03000500E55172600E037A016DB3000001000000000000000000000000000000000000000000000000000000|0x05000500E55172601059DDAFD101000001000000000000000000000000000000000000000000000000000000|52257|1452|322|0|2|2025-10-11 21:17:53.173|2025-10-12 01:14:21.763|UPDATE TOP (@actual - @optionsEarned) cd
+    SET cd.estadoCuponID = 5,
+        cd.taxIdentifier = '',
+        cd.transactionGuid = ''
+    FROM CuponesDigitales cd WITH (ROWLOCK, UPDLOCK, READPAST)
+    WHERE cd.campannaID = @campannaID
+    AND cd.taxIdentif
+EXPENSIVE_QUERIES|0x030005006BD9DF19DC0C060172B3000001000000000000000000000000000000000000000000000000000000|0x050005006BD9DF190098212ED101000001000000000000000000000000000000000000000000000000000000|8988|973|195|0|2394|2025-10-12 12:02:35.813|2025-10-12 18:24:35.480|UPDATE CuponesDigitales
+        SET estadoCuponID = 3
+        WHERE identifier = @Identifier
+          AND estadoCuponID <> 3
+EXPENSIVE_QUERIES|0x030005008CA6F94043523D016AB3000000000000000000000000000000000000000000000000000000000000|0x050005008CA6F940D05BDDAFD101000001000000000000000000000000000000000000000000000000000000|1219|433|290|0|90|2025-10-12 12:14:15.310|2025-10-12 14:34:07.667|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x03000500A4FDD31A2B21060172B3000001000000000000000000000000000000000000000000000000000000|0x05000500A4FDD31A10B903ADD101000001000000000000000000000000000000000000000000000000000000|642|259|18|0|10089|2025-10-11 07:45:11.040|2025-10-12 18:24:35.487|UPDATE CuponesFisicoCorreccion
+        SET estadoCuponID = 3
+        WHERE identifier = @Identifier
+          AND estadoCuponID <> 3
+EXPENSIVE_QUERIES|0x030005008CA6F94043523D016AB3000000000000000000000000000000000000000000000000000000000000|0x050005008CA6F940509A212ED101000001000000000000000000000000000000000000000000000000000000|588|464|329|0|1562|2025-10-12 17:16:00.750|2025-10-12 18:24:36.927|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005001E7666617D38EC006EB3000000000000000000000000000000000000000000000000000000000000|0x050005001E76666110F95D0DD001000001000000000000000000000000000000000000000000000000000000|480|441|326|0|124|2025-10-12 16:32:42.983|2025-10-12 18:17:14.023|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x0300050090BE4E634E7FEC006EB3000000000000000000000000000000000000000000000000000000000000|0x0500050090BE4E63301F8ED6D101000001000000000000000000000000000000000000000000000000000000|444|444|224|0|26|2025-10-12 16:32:07.997|2025-10-12 18:17:34.483|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005001E7666617D38EC006EB3000000000000000000000000000000000000000000000000000000000000|0x050005001E766661C0BA03ADD101000001000000000000000000000000000000000000000000000000000000|286|221|250|0|130|2025-10-12 16:29:55.300|2025-10-12 18:24:30.363|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005008CA6F94043523D016AB3000000000000000000000000000000000000000000000000000000000000|0x050005008CA6F940901E8ED6D101000001000000000000000000000000000000000000000000000000000000|205|185|24|0|1333|2025-10-12 16:27:56.360|2025-10-12 18:24:36.920|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005001E7666617D38EC006EB3000000000000000000000000000000000000000000000000000000000000|0x050005001E766661805DDDAFD101000001000000000000000000000000000000000000000000000000000000|201|200|25|0|49|2025-10-12 16:30:32.890|2025-10-12 18:16:53.270|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005008CA6F94043523D016AB3000000000000000000000000000000000000000000000000000000000000|0x050005008CA6F94010D1BCEAD101000001000000000000000000000000000000000000000000000000000000|184|182|23|0|57|2025-10-12 12:10:44.587|2025-10-12 14:34:11.847|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x0300050090BE4E634E7FEC006EB3000000000000000000000000000000000000000000000000000000000000|0x0500050090BE4E6380FD5D0DD001000001000000000000000000000000000000000000000000000000000000|168|167|25|0|36|2025-10-12 16:30:33.107|2025-10-12 18:24:05.807|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005009104E46BA008650173B3000001000000000000000000000000000000000000000000000000000000|0x050005009104E46BE0A8F1FDD001000001000000000000000000000000000000000000000000000000000000|156|156|3|0|12012|2025-10-11 21:53:05.117|2025-10-12 18:24:35.410|INSERT INTO @CouponTable (IDCupon)
+    SELECT TRIM(value)
+    FROM STRING_SPLIT(@CouponIDs, ',')
+    WHERE TRIM(value) <> ''
+EXPENSIVE_QUERIES|0x030005001E7666617D38EC006EB3000000000000000000000000000000000000000000000000000000000000|0x050005001E76666160D3BCEAD101000001000000000000000000000000000000000000000000000000000000|143|143|57|0|26|2025-10-12 16:29:21.433|2025-10-12 18:23:57.073|INSERT INTO GeneralEstadosCuyOpClientePromocion (
+                IDCupon, couponCorrelative, transactionDate, promotionId, promotionName,
+                transactionGuid, taxidentifier, Identifier, couponTypeId, couponTypeName,
+                commerceCod
+EXPENSIVE_QUERIES|0x030005003713D643D4C13D016AB3000000000000000000000000000000000000000000000000000000000000|0x050005003713D643809E86D4D101000001000000000000000000000000000000000000000000000000000000|124|112|205|0|24308|2025-10-11 22:06:44.610|2025-10-12 18:24:36.927|IF UPDATE(estadoCuponID) AND EXISTS (SELECT 1 FROM inserted WHERE estadoCuponID = 4)
+EXPENSIVE_QUERIES|0x030005001E7666617D38EC006EB3000000000000000000000000000000000000000000000000000000000000|0x050005001E76666110F95D0DD001000001000000000000000000000000000000000000000000000000000000|107|92|197|0|24308|2025-10-11 22:06:44.613|2025-10-12 18:24:36.927|IF EXISTS (SELECT 1 FROM inserted WHERE estadoCuponID = 3)
+
+(20 rows affected)
+WAIT_STATISTICS|SOS_WORK_DISPATCHER|9037665|48153698331|4449065|6851967|48146846364|5328
+WAIT_STATISTICS|PREEMPTIVE_XE_DISPATCHER|6619|1801455822|20147753|0|1801455822|272164
+WAIT_STATISTICS|XE_LIVE_TARGET_TVF|33662|1227985763|60100|6162|1227979601|36479
+WAIT_STATISTICS|HADR_WORK_QUEUE|122747|1227966964|11314|2568|1227964396|10004
+WAIT_STATISTICS|PREEMPTIVE_OS_GETQUEUEDCOMPLETIONSTATUS|253785495|1222658337|28612422|0|1222658337|4
+WAIT_STATISTICS|SOS_SCHEDULER_YIELD|119529068|764064847|1640|764043434|21413|6
+WAIT_STATISTICS|HADR_FILESTREAM_IOMGR_IOCOMPLETION|1204123|614019961|574|16405|614003556|509
+WAIT_STATISTICS|WAIT_XTP_OFFLINE_CKPT_NEW_LOG|231649|614005682|5031|16721|613988961|2650
+WAIT_STATISTICS|RBIO_COMM_RETRY|40986|613991333|15381|738|613990595|14980
+WAIT_STATISTICS|QDS_PERSIST_TASK_MAIN_LOOP_SLEEP|10233|613988014|60370|190|613987824|60000
+WAIT_STATISTICS|PVS_PREALLOCATE|399113|613987807|1573728|2425031|611562776|1538
+WAIT_STATISTICS|DIRTY_PAGE_POLL|5612147|613960181|312|34233|613925948|109
+WAIT_STATISTICS|ONDEMAND_TASK_QUEUE|263562|613821106|345323735|21322|613799784|2328
+WAIT_STATISTICS|SP_SERVER_DIAGNOSTICS_SLEEP|64539|613813707|300023|613813707|0|9510
+WAIT_STATISTICS|HADR_FABRIC_CALLBACK|1535|613805129|1800016|125|613805004|399873
+WAIT_STATISTICS|SQP_STATS_REPORTING |2047|613799563|300016|52|613799511|299853
+WAIT_STATISTICS|QDS_ASYNC_QUEUE|462|611283447|48018933|172|611283275|1323124
+WAIT_STATISTICS|WAIT_XTP_HOST_WAIT|40|490252118|280481682|4|490252114|12256302
+WAIT_STATISTICS|CXCONSUMER|4483371|288344413|131361|3241827|285102586|64
+WAIT_STATISTICS|RESOURCE_GOVERNOR_IDLE|7464835|67399263|104|0|67399263|9
+
+(20 rows affected)

@@ -1,0 +1,7 @@
+{
+    "fragmentation_threshold": 30,
+    "index_usage_threshold": 1000,
+    "query_timeout": 300,
+    "max_degree_parallelism": 4,
+    "cost_threshold_parallelism": 50
+}

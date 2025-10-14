@@ -1,0 +1,21 @@
+erDiagram
+    CuponesDigitales {
+        Id PK
+        CodigoPromocion 
+        FechaCreacion 
+        Estado 
+    }
+    CuponesFisicoCorreccion {
+        Id PK
+        CodigoCupon 
+        FechaCorreccion 
+        Motivo 
+    }
+    Promociones {
+        Id PK
+        Nombre 
+        FechaInicio 
+        FechaFin 
+    }
+    CuponesDigitales ||--o{ Promociones : references
+    CuponesFisicoCorreccion ||--o{ CuponesDigitales : references

@@ -1,0 +1,28 @@
+{
+  "database_info": {
+    "name": "persqldbmotorpromocprd",
+    "server": "persqlmotorpromocprd.database.windows.net",
+    "username": "u_yairpanqueva",
+    "edition": "Hyperscale",
+    "tier": "HS_Gen5_12",
+    "size_gb": 30,
+    "record_count": 58000000,
+    "status": "production",
+    "description": "Motor de Promociones - Producción"
+  },
+  "optimization_settings": {
+    "max_degree_parallelism": 4,
+    "cost_threshold_parallelism": 50,
+    "fill_factor": 90,
+    "fragmentation_threshold": 30,
+    "maintenance_window": "02:00-04:00"
+  },
+  "monitoring_thresholds": {
+    "cpu_warning": 70,
+    "cpu_critical": 85,
+    "memory_warning": 75,
+    "memory_critical": 90,
+    "query_time_warning": 1000,
+    "query_time_critical": 3000
+  }
+}

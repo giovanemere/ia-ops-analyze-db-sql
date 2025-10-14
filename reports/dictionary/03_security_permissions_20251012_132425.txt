@@ -1,0 +1,6 @@
+Msg 207, Level 16, State 1, Server persqlmotorpromocprd, Line 112
+Invalid column name 'key_id'.
+Msg 207, Level 16, State 1, Server persqlmotorpromocprd, Line 103
+Invalid column name 'key_id'.
+Msg 207, Level 16, State 1, Server persqlmotorpromocprd, Line 119
+Invalid column name 'key_id'.

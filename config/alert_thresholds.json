@@ -1,0 +1,23 @@
+{
+  "critical": {
+    "cpu_usage": 90,
+    "memory_usage": 85,
+    "avg_query_time": 5000,
+    "fragmentation": 50,
+    "blocking_sessions": 10
+  },
+  "warning": {
+    "cpu_usage": 75,
+    "memory_usage": 70,
+    "avg_query_time": 2000,
+    "fragmentation": 30,
+    "blocking_sessions": 5
+  },
+  "info": {
+    "cpu_usage": 60,
+    "memory_usage": 55,
+    "avg_query_time": 1000,
+    "fragmentation": 15,
+    "blocking_sessions": 2
+  }
+}

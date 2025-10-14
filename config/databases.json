@@ -1,0 +1,40 @@
+{
+  "databases": {
+    "persqldbmotorpromocprd": {
+      "name": "persqldbmotorpromocprd",
+      "server": "persqlmotorpromocprd.database.windows.net",
+      "username": "u_yairpanqueva",
+      "password": "0x2E0403602967FDD263E5",
+      "edition": "Hyperscale",
+      "tier": "HS_Gen5_12",
+      "size_gb": 30,
+      "status": "production",
+      "description": "Motor de Promociones - Producción"
+    },
+    "persqldbmotorpromodev": {
+      "name": "persqldbmotorpromodev",
+      "server": "persqlmotorpromodev.database.windows.net",
+      "username": "u_dev_user",
+      "password": "dev_password_here",
+      "edition": "Standard",
+      "tier": "S2",
+      "size_gb": 5,
+      "status": "development",
+      "description": "Motor de Promociones - Desarrollo"
+    },
+    "persqldbmotorpromotest": {
+      "name": "persqldbmotorpromotest",
+      "server": "persqlmotorpromotest.database.windows.net",
+      "username": "u_test_user",
+      "password": "test_password_here",
+      "edition": "Standard",
+      "tier": "S1",
+      "size_gb": 2,
+      "status": "testing",
+      "description": "Motor de Promociones - Testing"
+    }
+  },
+  "default_database": "persqldbmotorpromocprd",
+  "connection_timeout": 30,
+  "command_timeout": 300
+}

@@ -1,0 +1,27 @@
+{
+  "database_connectivity": {
+    "enabled": true,
+    "interval_minutes": 5,
+    "timeout_seconds": 30,
+    "query": "SELECT 1"
+  },
+  "performance_baseline": {
+    "enabled": true,
+    "interval_minutes": 15,
+    "metrics": [
+      "avg_cpu",
+      "avg_memory",
+      "query_count"
+    ]
+  },
+  "index_health": {
+    "enabled": true,
+    "interval_hours": 6,
+    "fragmentation_check": true
+  },
+  "backup_status": {
+    "enabled": true,
+    "interval_hours": 24,
+    "check_last_backup": true
+  }
+}

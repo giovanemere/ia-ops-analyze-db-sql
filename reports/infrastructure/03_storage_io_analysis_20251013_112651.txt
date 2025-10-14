@@ -1,0 +1,8 @@
+Msg 156, Level 15, State 1, Server persqlmotorpromocprd, Line 51
+Incorrect syntax near the keyword 'RowCount'.
+Msg 102, Level 15, State 1, Server persqlmotorpromocprd, Line 52
+Incorrect syntax near 'SUM'.
+Msg 102, Level 15, State 1, Server persqlmotorpromocprd, Line 53
+Incorrect syntax near 'SUM'.
+Msg 102, Level 15, State 1, Server persqlmotorpromocprd, Line 54
+Incorrect syntax near 'SUM'.

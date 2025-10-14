@@ -1,0 +1,42 @@
+{
+  "title": "SQL Analysis Project - Dashboard",
+  "refresh_interval": 300,
+  "panels": [
+    {
+      "title": "Performance Overview",
+      "type": "metrics",
+      "metrics": [
+        "cpu_usage",
+        "memory_usage",
+        "query_time"
+      ]
+    },
+    {
+      "title": "Database Health",
+      "type": "status",
+      "indicators": [
+        "connectivity",
+        "fragmentation",
+        "backups"
+      ]
+    },
+    {
+      "title": "Recent Optimizations",
+      "type": "timeline",
+      "events": [
+        "index_creation",
+        "query_optimization",
+        "maintenance"
+      ]
+    },
+    {
+      "title": "Alerts & Notifications",
+      "type": "alerts",
+      "levels": [
+        "critical",
+        "warning",
+        "info"
+      ]
+    }
+  ]
+}

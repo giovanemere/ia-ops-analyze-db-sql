@@ -1,0 +1,9 @@
+# SQL Analysis Project Dependencies
+pyodbc>=4.0.35
+python-dotenv>=1.0.0
+azure-storage-blob>=12.19.0
+azure-identity>=1.15.0
+pandas>=2.1.0
+matplotlib>=3.7.0
+click>=8.1.0
+rich>=13.0.0

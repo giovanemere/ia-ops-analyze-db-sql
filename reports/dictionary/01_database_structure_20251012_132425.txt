@@ -1,0 +1,204 @@
+DATABASE_INFO|persqldbmotorpromocprd|SQL_Latin1_General_CP1_CI_AS|Hyperscale|HS_Gen5_12|-1|2025-09-24 14:26:27.790|170
+
+(1 rows affected)
+TABLES|dbo|auditoria_c_digital|USER_TABLE|2025-09-27 00:01:17.077|2025-09-27 00:01:17.077|0|.00|.00|.00
+TABLES|dbo|auditoria_c_fisico_correccion|USER_TABLE|2025-09-27 00:01:17.580|2025-09-27 00:01:17.580|0|.00|.00|.00
+TABLES|dbo|auditoria_opcion_digital|USER_TABLE|2025-09-27 00:01:18.073|2025-09-27 00:01:18.073|0|.00|.00|.00
+TABLES|dbo|Campanna|USER_TABLE|2025-09-27 00:01:18.583|2025-09-27 00:01:28.987|4|.14|.03|.11
+TABLES|dbo|Campanna_Auditoria|USER_TABLE|2025-09-27 00:01:19.110|2025-09-27 00:01:24.113|0|.00|.00|.00
+TABLES|dbo|CuponesDigitales|USER_TABLE|2025-09-27 00:01:19.630|2025-10-11 19:31:14.367|0|.14|.03|.11
+TABLES|dbo|CuponesDigitales|USER_TABLE|2025-09-27 00:01:19.630|2025-10-11 19:31:14.367|45001666|15017.48|14949.03|68.45
+TABLES|dbo|CuponesFisicoCorreccion|USER_TABLE|2025-09-27 00:01:20.150|2025-10-11 07:45:11.040|0|.00|.00|.00
+TABLES|dbo|CuponesFisicoCorreccion|USER_TABLE|2025-09-27 00:01:20.150|2025-10-11 07:45:11.040|12010500|3241.41|3239.74|1.67
+TABLES|dbo|Estados|USER_TABLE|2025-09-27 00:01:20.663|2025-09-27 00:01:28.633|5|.07|.02|.05
+TABLES|dbo|GeneralEstadosCuyOpClientePromocion|USER_TABLE|2025-09-27 00:01:16.037|2025-10-11 06:42:52.783|1360536|515.79|515.49|.30
+TABLES|dbo|OpcionesDigitales|USER_TABLE|2025-09-27 00:01:21.167|2025-10-06 14:21:24.023|4|.07|.02|.05
+TABLES|dbo|SolicitudesEstados|USER_TABLE|2025-09-27 00:01:21.677|2025-09-27 00:01:27.083|15|.14|.05|.09
+TABLES|dbo|Usuarios|USER_TABLE|2025-09-27 00:01:22.183|2025-09-27 00:01:22.183|2|.07|.02|.05
+
+(14 rows affected)
+COLUMNS|dbo|auditoria_c_digital|ID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|auditoria_c_digital|nombre|2|nvarchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_digital|fechaEstado|3|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_digital|IDCupon|4|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_digital|campannaID|5|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_fisico_correccion|ID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|auditoria_c_fisico_correccion|nombre|2|nvarchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_fisico_correccion|fechaEstado|3|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_fisico_correccion|IDCupon|4|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_c_fisico_correccion|campannaID|5|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_opcion_digital|ID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|auditoria_opcion_digital|taxIdentifier|2|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|auditoria_opcion_digital|identifier|3|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_opcion_digital|fechaEstado|4|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|auditoria_opcion_digital|nombre|5|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|auditoria_opcion_digital|campannaID|6|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|Campanna|campannaID|1|varchar|200|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna|nombre|2|varchar|100|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna|fechaInicio|3|datetime2|NULL|23|3|NO||NO|NO||
+COLUMNS|dbo|Campanna|fechaFin|4|datetime2|NULL|23|3|NO||NO|NO||
+COLUMNS|dbo|Campanna|pais|5|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna|tipoCampanna|6|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|Campanna|fechaCreacion|7|datetime2|NULL|23|3|NO|(sysdatetime())|NO|NO||
+COLUMNS|dbo|Campanna|tieneCupones|8|bit|NULL|1|0|NO|((1))|NO|NO||
+COLUMNS|dbo|Campanna|ID|9|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|Campanna_Auditoria|AuditID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|Campanna_Auditoria|campannaID|2|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|nombre|3|varchar|100|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|fechaInicio|4|datetime2|NULL|23|3|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|fechaFin|5|datetime2|NULL|23|3|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|pais|6|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|tipoCampanna|7|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|fechaCreacion|8|datetime2|NULL|23|3|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|tieneCupones|9|bit|NULL|1|0|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|Operacion|10|varchar|15|0|0|NO||NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|FechaAuditoria|11|datetime2|NULL|23|3|NO|(sysdatetime())|NO|NO||
+COLUMNS|dbo|Campanna_Auditoria|Usuario|12|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesDigitales|IDCupon|1|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|CuponesDigitales|campannaID|2|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|CuponesDigitales|fechaCreacion|3|datetime2|NULL|19|0|NO|(dateadd(hour,(-5),sysdatetimeoffset()))|NO|NO||
+COLUMNS|dbo|CuponesDigitales|estadoCuponID|4|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|CuponesDigitales|coorelativo|5|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesDigitales|IDSegmentado|6|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesDigitales|ID|7|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|CuponesDigitales|commerceCode|8|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesDigitales|taxIdentifier|9|nvarchar|50|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|CuponesDigitales|identifier|10|nvarchar|20|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|CuponesDigitales|sourceApp|11|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesDigitales|transactionGuid|12|varchar|50|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|IDCupon|1|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|tipoCupon|2|varchar|30|0|0|NO||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|campannaID|3|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|fechaCreacion|4|datetime2|NULL|19|0|NO|(dateadd(hour,(-5),sysdatetimeoffset()))|NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|estadoCuponID|5|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|URL|6|varchar|200|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|coorelativo|7|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|IDSegmentado|8|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|proveedor|9|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|ID|10|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|commerceCode|11|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|taxIdentifier|12|varchar|20|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|identifier|13|varchar|20|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|sourceApp|14|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|transactionGuid|15|varchar|50|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|CuponesFisicoCorreccion|Idsource|16|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|Estados|ID|1|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|Estados|nombre|2|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|ID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|IDCupon|2|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|couponCorrelative|3|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|transactionDate|4|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|promotionId|5|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|promotionName|6|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|transactionGuid|7|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|taxidentifier|8|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|Identifier|9|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|couponTypeId|10|int|NULL|10|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|couponTypeName|11|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|commerceCode|12|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|estadoId|13|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|estadoNombre|14|varchar|20|0|0|NO||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|fechaAsignacion|15|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|fechaRegistro|16|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|fechaCancelacion|17|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|processDate|18|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|sourceApp|19|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|fechaCreacion|20|datetime|NULL|23|3|YES|(getdate())|NO|NO||
+COLUMNS|dbo|GeneralEstadosCuyOpClientePromocion|fechaActualizacion|21|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|ID|1|int|NULL|10|0|NO||YES|NO||
+COLUMNS|dbo|OpcionesDigitales|campannaID|2|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|taxIdentifier|3|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|estadoOpcionID|4|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|identifier|5|varchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|commerceCode|6|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|fechaCreacion|7|date|NULL|10|0|YES|(getdate())|NO|NO||
+COLUMNS|dbo|OpcionesDigitales|sourceApp|8|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|OpcionID|9|varchar|100|0|0|YES||NO|NO||
+COLUMNS|dbo|OpcionesDigitales|transactionGuid|10|varchar|50|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|OpcionesDigitales|optionType|11|varchar|50|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|OpcionesDigitales|optionsEarned|12|int|NULL|10|0|YES|((0))|NO|NO||
+COLUMNS|dbo|OpcionesDigitales|identifierTypeName|13|varchar|20|0|0|YES|('')|NO|NO||
+COLUMNS|dbo|OpcionesDigitales|transactionDate|14|date|NULL|10|0|YES|(NULL)|NO|NO||
+COLUMNS|dbo|SolicitudesEstados|SolicitudID|1|uniqueidentifier|NULL|0|0|NO|(newid())|NO|NO||
+COLUMNS|dbo|SolicitudesEstados|DatosEntrada|2|nvarchar|0|0|0|NO||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|Estado|3|int|NULL|10|0|NO||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|MensajeError|4|nvarchar|0|0|0|YES||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|FechaCreacion|5|datetime|NULL|23|3|YES|(getdate())|NO|NO||
+COLUMNS|dbo|SolicitudesEstados|FechaActualizacion|6|datetime|NULL|23|3|YES||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|CampannaID|7|nvarchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|TipoSolicitud|8|nvarchar|50|0|0|YES||NO|NO||
+COLUMNS|dbo|SolicitudesEstados|Archivo|9|varchar|250|0|0|YES||NO|NO||
+COLUMNS|dbo|Usuarios|username|1|varchar|50|0|0|NO||NO|NO||
+COLUMNS|dbo|Usuarios|password|2|varchar|100|0|0|NO||NO|NO||
+COLUMNS|dbo|Usuarios|rol|3|varchar|30|0|0|YES||NO|NO||
+
+(114 rows affected)
+PRIMARY_KEYS|dbo|auditoria_c_digital|PK__auditori__3214EC273D6C85A8|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|auditoria_c_fisico_correccion|PK__auditori__3214EC274513D978|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|auditoria_opcion_digital|PK__auditori__3214EC274135407D|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|Campanna|Campanna_PK|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|Campanna_Auditoria|PK_Campanna_Auditoria|AuditID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|campannaID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|ID|2|YES|CLUSTERED
+PRIMARY_KEYS|dbo|CuponesFisicoCorreccion|PK_CuponesFisicoCorreccion|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|Estados|PK__Estados__3214EC277B110505|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|GeneralEstadosCuyOpClientePromocion|PK__GeneralE__3214EC27FE1489B2|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|OpcionesDigitales|PK__Opciones__3214EC27BFCC29A4|ID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|SolicitudesEstados|PK__Solicitu__85E95DA73BF97A6A|SolicitudID|1|YES|CLUSTERED
+PRIMARY_KEYS|dbo|Usuarios|PK__Usuarios__F3DBC573843E572B|username|1|YES|CLUSTERED
+
+(13 rows affected)
+FOREIGN_KEYS|dbo|CuponesDigitales|campannaID|CuponesDigitales_Campanna_FK|dbo|Campanna|ID|CASCADE|CASCADE|ENABLED
+FOREIGN_KEYS|dbo|CuponesDigitales|estadoCuponID|FK_CuponesDigitales_Estados|dbo|Estados|ID|NO_ACTION|NO_ACTION|ENABLED
+FOREIGN_KEYS|dbo|CuponesFisicoCorreccion|campannaID|CuponesFisicoCorreccion_Campanna_FK|dbo|Campanna|ID|CASCADE|CASCADE|ENABLED
+FOREIGN_KEYS|dbo|CuponesFisicoCorreccion|estadoCuponID|FK_CuponesFisicoCorreccion_Estados|dbo|Estados|ID|NO_ACTION|NO_ACTION|ENABLED
+FOREIGN_KEYS|dbo|OpcionesDigitales|estadoOpcionID|FK_OpcionesDigitales_Estados|dbo|Estados|ID|NO_ACTION|NO_ACTION|ENABLED
+FOREIGN_KEYS|dbo|OpcionesDigitales|campannaID|OpcionesDigitales_Campanna_FK|dbo|Campanna|ID|NO_ACTION|NO_ACTION|ENABLED
+
+(6 rows affected)
+INDEXES|dbo|auditoria_c_digital|PK__auditori__3214EC273D6C85A8|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|auditoria_c_fisico_correccion|PK__auditori__3214EC274513D978|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|auditoria_opcion_digital|PK__auditori__3214EC274135407D|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|Campanna|Campanna_PK|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|Campanna|UQ_Campanna_campannaID|NONCLUSTERED|YES|NO|YES|campannaID ASC|0|ENABLED
+INDEXES|dbo|Campanna_Auditoria|PK_Campanna_Auditoria|CLUSTERED|YES|YES|NO|AuditID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|idx_identifier_campanna_estado|NONCLUSTERED|NO|NO|NO|identifier ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|idx_tax_campanna_estado|NONCLUSTERED|NO|NO|NO|taxIdentifier ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_Cupones_Campanna_Estado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_Cupones_CampannaID|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Fecha_Optimizado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, estadoCuponID ASC, taxIdentifier ASC, identifier ASC, campannaID ASC, fechaCreacion DESC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Identifier_Estado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, identifier ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_Campanna_Tax_Stats|NONCLUSTERED|NO|NO|NO|IDCupon ASC, identifier ASC, campannaID ASC, taxIdentifier ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|IX_CuponesDigitales_FechaCreacion_Optimizado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, estadoCuponID ASC, taxIdentifier ASC, fechaCreacion DESC|0|ENABLED
+INDEXES|dbo|CuponesDigitales|PK_CuponesDigitales_CampannaID_ID|CLUSTERED|YES|YES|NO|campannaID ASC, ID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|idx_cupon_campanna_estado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|idx_identifier_campanna_estado|NONCLUSTERED|NO|NO|NO|identifier ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|idx_tax_identifier_campanna_estado|NONCLUSTERED|NO|NO|NO|taxIdentifier ASC, campannaID ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_Campanna_Identifier_Estado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, identifier ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisico_FechaCreacion_Optimizado|NONCLUSTERED|NO|NO|NO|IDCupon ASC, campannaID ASC, estadoCuponID ASC, taxIdentifier ASC, fechaCreacion DESC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|IX_CuponesFisicoCorreccion_Identifier_Estado|NONCLUSTERED|NO|NO|NO|identifier ASC, estadoCuponID ASC|0|ENABLED
+INDEXES|dbo|CuponesFisicoCorreccion|PK_CuponesFisicoCorreccion|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|Estados|PK__Estados__3214EC277B110505|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_estadoId|NONCLUSTERED|NO|NO|NO|estadoId ASC|100|ENABLED
+INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_fechaCreacion|NONCLUSTERED|NO|NO|NO|fechaCreacion ASC|100|ENABLED
+INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|IX_taxidentifier|NONCLUSTERED|NO|NO|NO|taxidentifier ASC|100|ENABLED
+INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|nci_msft_1_GeneralEstadosCuyOpClientePromocion_7E889BA7CF4601C17673BCA8830A1B05|NONCLUSTERED|NO|NO|NO|IDCupon ASC|0|ENABLED
+INDEXES|dbo|GeneralEstadosCuyOpClientePromocion|PK__GeneralE__3214EC27FE1489B2|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|OpcionesDigitales|PK__Opciones__3214EC27BFCC29A4|CLUSTERED|YES|YES|NO|ID ASC|0|ENABLED
+INDEXES|dbo|SolicitudesEstados|IX_SolicitudesCupon_CampannaID|NONCLUSTERED|NO|NO|NO|CampannaID ASC|0|ENABLED
+INDEXES|dbo|SolicitudesEstados|PK__Solicitu__85E95DA73BF97A6A|CLUSTERED|YES|YES|NO|SolicitudID ASC|0|ENABLED
+INDEXES|dbo|Usuarios|PK__Usuarios__F3DBC573843E572B|CLUSTERED|YES|YES|NO|username ASC|0|ENABLED
+
+(32 rows affected)
+
+(0 rows affected)
+TRIGGERS|dbo|CuponesDigitales|TR_CuponesDigital_Asignacion|SQL_TRIGGER|ENABLED|2025-10-02 19:15:19.903|2025-10-02 19:15:19.903
+TRIGGERS|dbo|CuponesDigitales|TR_CuponesDigital_Cancelacion|SQL_TRIGGER|ENABLED|2025-10-02 19:16:55.107|2025-10-02 19:16:55.107
+TRIGGERS|dbo|CuponesDigitales|TR_CuponesDigital_Registro|SQL_TRIGGER|ENABLED|2025-10-06 14:20:03.190|2025-10-06 14:20:03.190
+TRIGGERS|dbo|CuponesFisicoCorreccion|TR_CuponesFisico_Cancelacion|SQL_TRIGGER|ENABLED|2025-10-01 22:19:59.657|2025-10-01 22:19:59.657
+TRIGGERS|dbo|CuponesFisicoCorreccion|TR_CuponesFisico_Registro|SQL_TRIGGER|ENABLED|2025-10-06 14:21:03.620|2025-10-06 14:21:03.620
+TRIGGERS|dbo|OpcionesDigitales|TR_Opciones_Asignacion|SQL_TRIGGER|ENABLED|2025-10-01 22:20:11.657|2025-10-01 22:20:11.657
+TRIGGERS|dbo|OpcionesDigitales|TR_Opciones_Cancelacion|SQL_TRIGGER|ENABLED|2025-10-01 22:20:16.003|2025-10-01 22:20:16.003
+TRIGGERS|dbo|OpcionesDigitales|TR_Opciones_Registro|SQL_TRIGGER|ENABLED|2025-10-06 14:21:24.023|2025-10-06 14:21:24.023
+
+(8 rows affected)
